@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Examen_P3_Rebeca
 {
-    public partial class Form2 : Form
+    public partial class LBLBienvenida : Form
     {
-        public Form2()
+        public LBLBienvenida()
         {
             InitializeComponent();
         }
