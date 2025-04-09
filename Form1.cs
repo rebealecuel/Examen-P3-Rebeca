@@ -12,7 +12,7 @@ namespace Examen_P3_Rebeca
 {
     public partial class Form1 : Form
     {
-        Casa cas = new Casa();
+        Acciones acc = new Acciones();
         public Form1()
         {
             InitializeComponent();
