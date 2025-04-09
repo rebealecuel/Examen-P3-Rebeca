@@ -12,7 +12,7 @@ namespace Examen_P3_Rebeca
 {
     public partial class Form1 : Form
     {
-        Usuario Usu = new Usuario();
+        Casa cas = new Casa();
         public Form1()
         {
             InitializeComponent();
@@ -20,12 +20,12 @@ namespace Examen_P3_Rebeca
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            string user = txbUsuario.Text;
+            int user = txbUsuario.Text;
             string pass = txbPassword.Text;
 
-            var lista = Usu.ObtenerUser();
+            var lista = cas.ObtenerUser();
 
-            var validar = lista.FirstOrDefault(u => u.User == user && u.Password == pass);
+            var validar = lista.FirstOrDefault(u => u.ID == user && u.Password == pass);
             if (validar != null)
             {
                 this.Hide();
@@ -36,6 +36,11 @@ namespace Examen_P3_Rebeca
             {
                 MessageBox.Show("Error critico");
             }
+        }
+
+        private void txbUsuario_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
