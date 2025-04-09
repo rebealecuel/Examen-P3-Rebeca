@@ -21,8 +21,16 @@ namespace Examen_P3_Rebeca
         {
             try
             {
-                var actuCasa = listahouse
+                var actuCasa = listahouse.Find(x=>x.NumCasa == numcasa);
+                actuCasa.NumCasa = numcasa;
+                actuCasa.Lugar = lugar;
+                actuCasa.Color = color;
+                actuCasa.Patio = patio;
+                actuCasa.Ventanas = ventanas;
+                return true;
             }
+            catch (Exception)
+            { return false; }
         }
         public bool Eliminarcasa(int numcasa)
         {
